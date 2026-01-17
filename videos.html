@@ -5,12 +5,16 @@
 <title>Video Gallery | Dr. Ajay Shrikrishna Chowbe</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Video gallery of Dr. Ajay Shrikrishna Chowbe featuring academic leadership talks, CBSE guidance sessions, and educational interactions.">
+<meta name="description"
+      content="Academic leadership talks, CBSE guidance sessions, seminars, and professional videos by Dr. Ajay Shrikrishna Chowbe.">
 
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="director-bg">
+
+<!-- ================= PARTICLE BACKGROUND ================= -->
+<div id="particles-js"></div>
 
 <!-- ================= HEADER ================= -->
 <header>
@@ -38,77 +42,151 @@
 
 <!-- INTRO -->
 <div class="section">
-<h2>Academic Video Gallery</h2>
+<h2>Academic & Professional Video Gallery</h2>
 <p>
-This video gallery showcases Dr. Ajay Shrikrishna Chowbe’s
-<strong>academic lectures, leadership talks, CBSE guidance sessions,
-and professional interactions</strong>. These videos reflect his
-commitment to knowledge sharing, institutional excellence,
-and educational reform.
+This video gallery features <strong>academic leadership talks,
+CBSE inspection guidance, seminars, principal’s addresses,
+and professional interactions</strong>.  
+All content reflects commitment to quality education,
+institutional excellence, and ethical leadership.
 </p>
 </div>
 
-<!-- CATEGORY: LEADERSHIP -->
+<!-- CATEGORY 1 -->
 <div class="section">
 <h2>Academic Leadership & School Excellence</h2>
 
-<div class="video-grid">
-  <iframe src="https://www.youtube.com/embed/vSRp-IPpVsI" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/7moXGjypcG4" allowfullscreen></iframe>
+<div class="video-gallery">
+  <div class="video-card"
+       data-video="https://www.youtube.com/embed/vSRp-IPpVsI"
+       data-caption="Academic Leadership & School Excellence Talk">
+    <img src="assets/images/video1.jpg" alt="Leadership Talk">
+    <span class="play-btn">▶</span>
+  </div>
+
+  <div class="video-card"
+       data-video="https://www.youtube.com/embed/7moXGjypcG4"
+       data-caption="Institutional Governance & Excellence">
+    <img src="assets/images/video2.jpg" alt="Governance Session">
+    <span class="play-btn">▶</span>
+  </div>
+</div>
 </div>
 
-<p>
-These sessions focus on leadership principles, effective school
-management, academic governance, and strategies for creating
-future-ready institutions aligned with NEP 2020.
-</p>
-</div>
-
-<!-- CATEGORY: CBSE -->
+<!-- CATEGORY 2 -->
 <div class="section">
-<h2>CBSE Affiliation, Inspection & Compliance Guidance</h2>
+<h2>CBSE Affiliation, Inspection & Compliance</h2>
 
-<div class="video-grid">
-  <iframe src="https://www.youtube.com/embed/vSRp-IPpVsI" allowfullscreen></iframe>
+<div class="video-gallery">
+  <div class="video-card"
+       data-video="https://www.youtube.com/embed/vSRp-IPpVsI"
+       data-caption="CBSE Affiliation & Inspection Guidance">
+    <img src="assets/images/video3.jpg" alt="CBSE Guidance">
+    <span class="play-btn">▶</span>
+  </div>
+</div>
 </div>
 
-<p>
-Guidance videos aimed at school managements and principals
-covering CBSE affiliation processes, inspection preparedness,
-documentation, and quality benchmarks.
-</p>
-</div>
-
-<!-- CATEGORY: ADDRESS -->
+<!-- CATEGORY 3 -->
 <div class="section">
 <h2>Principal’s Addresses & Educational Talks</h2>
 
-<div class="video-grid">
-  <video controls>
-    <source src="assets/videos/speech.mp4" type="video/mp4">
-  </video>
+<div class="video-gallery">
+  <div class="video-card"
+       data-video="assets/videos/speech.mp4"
+       data-caption="Principal’s Address on Quality Education"
+       data-local="true">
+    <img src="assets/images/video4.jpg" alt="Principal Address">
+    <span class="play-btn">▶</span>
+  </div>
+</div>
 </div>
 
-<p>
-Recorded addresses and talks delivered on themes such as
-quality education, teacher motivation, student development,
-and value-based learning.
-</p>
 </div>
 
-<!-- CATEGORY: INTERACTION -->
-<div class="section">
-<h2>Professional Interactions & Panel Discussions</h2>
-<p>
-Participation in panel discussions, workshops, seminars,
-and academic forums focusing on contemporary issues in education,
-policy implementation, and leadership development.
-</p>
+<!-- ================= FOOTER ================= -->
+<footer>
+© 2026 Dr. Ajay Shrikrishna Chowbe | Video Gallery
+</footer>
+
+<!-- ================= VIDEO LIGHTBOX ================= -->
+<div id="video-lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <div class="video-wrapper" id="video-wrapper"></div>
+  <div class="lightbox-caption" id="video-caption"></div>
 </div>
 
-<!-- PURPOSE -->
-<div class="section">
-<h2>Purpose of the Video Repository</h2>
-<ul>
-<li>Knowledge sharing and academic mentorship</li>
-<li>Guidance for school leaders and
+<!-- ================= PARTICLES SCRIPT ================= -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 40 },
+    color: { value: "#3a7bd5" },
+    opacity: { value: 0.25 },
+    size: { value: 3, random: true },
+    line_linked: { enable: true, opacity: 0.15 },
+    move: { enable: true, speed: 1.2 }
+  },
+  interactivity: { events: { onhover: { enable: false } } },
+  retina_detect: true
+});
+</script>
+
+<!-- ================= VIDEO LIGHTBOX SCRIPT ================= -->
+<script>
+const vLightbox = document.getElementById("video-lightbox");
+const vWrapper = document.getElementById("video-wrapper");
+const vCaption = document.getElementById("video-caption");
+const vClose = document.querySelector(".lightbox-close");
+
+document.querySelectorAll(".video-card").forEach(card=>{
+  card.onclick = ()=>{
+    const src = card.dataset.video;
+    const caption = card.dataset.caption || "";
+    const isLocal = card.dataset.local;
+
+    vLightbox.style.display="flex";
+    vCaption.textContent = caption;
+
+    if(isLocal){
+      vWrapper.innerHTML =
+        `<video controls autoplay style="max-width:90vw;max-height:80vh">
+           <source src="${src}" type="video/mp4">
+         </video>`;
+    } else {
+      vWrapper.innerHTML =
+        `<iframe src="${src}?autoplay=1"
+                 frameborder="0"
+                 allow="autoplay; fullscreen"
+                 allowfullscreen
+                 style="width:90vw;height:60vh;border-radius:12px"></iframe>`;
+    }
+  }
+});
+
+vClose.onclick = ()=>{
+  vLightbox.style.display="none";
+  vWrapper.innerHTML="";
+};
+vLightbox.onclick = e=>{
+  if(e.target===vLightbox){
+    vLightbox.style.display="none";
+    vWrapper.innerHTML="";
+  }
+};
+</script>
+
+<!-- ================= SCROLL ANIMATION ================= -->
+<script>
+const sections=document.querySelectorAll('.section');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('show')}
+  })
+},{threshold:0.15});
+sections.forEach(s=>observer.observe(s));
+</script>
+
+</body>
+</html>
