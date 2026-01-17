@@ -8,150 +8,74 @@
 <meta name="description" content="Dr. Ajay Shrikrishna Chowbe – Principal & Educationist with 28+ years of experience in CBSE & ICSE schools.">
 <meta name="keywords" content="Dr Ajay Chowbe, Principal, Educationist, CBSE School">
 <meta name="author" content="Dr. Ajay Shrikrishna Chowbe">
-<meta name="robots" content="index, follow">
 
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
-body{
-    margin:0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background:
-      linear-gradient(rgba(234,240,248,.95),rgba(234,240,248,.95)),
-      url("assets/images/education-bg.jpg");
-    background-size:cover;
-    background-attachment:fixed;
-    color:#333;
-}
+<link rel="stylesheet" href="assets/css/style.css">
 
-/* HEADER */
-header{
-    background:linear-gradient(to right,#1f3c88,#3a7bd5);
-    color:#fff;
-    text-align:center;
-    padding:40px 20px;
-}
-header img{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    border:5px solid #fff;
-    object-fit:cover;
-}
-
-/* NAV */
-nav{
-    background:#fff;
-    text-align:center;
-    position:sticky;
-    top:0;
-    z-index:999;
-    box-shadow:0 2px 6px rgba(0,0,0,.1);
-}
-nav a{
-    display:inline-block;
-    padding:14px 18px;
-    text-decoration:none;
-    font-weight:bold;
-    color:#1f3c88;
-}
-nav a:hover{color:#3a7bd5}
-
-/* CONTAINER */
-.container{
-    max-width:1200px;
-    margin:auto;
-    background:rgba(255,255,255,.97);
-    padding:40px;
-}
-
-/* SECTIONS */
-section{margin-bottom:50px}
-h2{
-    color:#1f3c88;
-    border-left:6px solid #3a7bd5;
-    padding-left:12px;
-}
-
-/* BUTTON */
-.button{
-    display:inline-block;
-    background:#1f3c88;
-    color:#fff;
-    padding:12px 22px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:bold;
-}
-.button:hover{background:#3a7bd5}
-
-/* FORM */
-form{max-width:600px}
-label{font-weight:bold;color:#1f3c88}
-input,select,textarea{
-    width:100%;
-    padding:10px;
-    margin-top:6px;
-    margin-bottom:15px;
-    border-radius:6px;
-    border:1px solid #ccc;
-}
-
-/* VIDEOS */
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:20px;
-}
-.video-box{
-    background:#f7f9fc;
-    padding:15px;
-    border-radius:10px;
-}
-.video-box iframe{width:100%;height:220px}
-
-/* GALLERY */
-.gallery img{
-    width:220px;
-    margin:10px;
-    border-radius:6px;
-}
-
-/* FOOTER */
-footer{
-    background:#1f3c88;
-    color:#fff;
-    text-align:center;
-    padding:15px;
-}
-</style>
 </head>
 
 <body>
 
 <header>
-<img src="assets/images/profile.jpg" alt="Dr. Ajay Shrikrishna Chowbe">
-<h1>Dr. Ajay Shrikrishna Chowbe</h1>
-<h3>Principal | Educationist | Academic Leader</h3>
-<p>Amravati, Maharashtra</p>
+  <img src="assets/images/profile.jpg" alt="Dr. Ajay Shrikrishna Chowbe">
+  <h1>Dr. Ajay Shrikrishna Chowbe</h1>
+  <h3>Principal | Educationist | Academic Leader</h3>
+  <p>Amravati, Maharashtra, India</p>
 </header>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="experience.html">Experience</a>
-<a href="awards.html">Awards</a>
-<a href="videos.html">Videos</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="experience.html">Experience</a></li>
+<li><a href="awards.html">Awards</a></li>
+<li><a href="videos.html">Videos</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
+<div class="section">
+<h2>Testimonials</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<p>
+“Dr. Ajay Chowbe’s academic leadership and strategic vision
+have significantly strengthened school governance and outcomes.”
+</p>
+<h4>Senior CBSE Official</h4>
+<span>Central Board of Secondary Education</span>
+</div>
+
+<div class="testimonial">
+<p>
+“An outstanding educationist whose mentorship and guidance
+have inspired teachers and students alike.”
+</p>
+<h4>School Director</h4>
+<span>CBSE Affiliated Institution</span>
+</div>
+
+<div class="testimonial">
+<p>
+“A principled leader with deep understanding of curriculum,
+inspection processes, and institutional excellence.”
+</p>
+<h4>Education Consultant</h4>
+<span>Maharashtra</span>
+</div>
+
+</div>
+</div>
+
 
 <div class="container">
 
-<section>
+<div class="section-card">
 <h2>Appointment / Enquiry</h2>
-<p>For academic consultation and professional interaction.</p>
+<p>For academic consultation, CBSE guidance, and professional interaction.</p>
 
 <form>
 <label>Full Name</label>
@@ -166,7 +90,8 @@ footer{
 <label>Purpose</label>
 <select>
 <option>Academic Consultation</option>
-<option>CBSE Guidance</option>
+<option>School Leadership Guidance</option>
+<option>CBSE Affiliation / Inspection</option>
 <option>Professional Meeting</option>
 </select>
 
@@ -175,41 +100,50 @@ footer{
 
 <button class="button">Request Appointment</button>
 </form>
-</section>
+</div>
 
-<section>
+<div class="section-card">
 <h2>About Me</h2>
 <p>
-A visionary education leader with <strong>28+ years</strong> of experience
-in CBSE & ICSE schools across India.
+A visionary education leader with <strong>28+ years</strong> of distinguished
+academic and administrative experience in CBSE & ICSE schools across India.
 </p>
-</section>
+</div>
 
-<section>
+<div class="section-card">
 <h2>Video Gallery</h2>
 <div class="video-grid">
-<div class="video-box">
 <iframe src="https://www.youtube.com/embed/vSRp-IPpVsI" allowfullscreen></iframe>
-</div>
-<div class="video-box">
 <iframe src="https://www.youtube.com/embed/7moXGjypcG4" allowfullscreen></iframe>
 </div>
 </div>
-</section>
 
-<section>
-<h2>Certificates</h2>
+<div class="section-card">
+<h2>Certificates & Downloads</h2>
 <div class="gallery">
 <img src="assets/images/cert1.jpg">
 <img src="assets/images/cert2.jpg">
 </div>
-</section>
+</div>
 
 </div>
 
 <footer>
-© 2026 Dr. Ajay Shrikrishna Chowbe
+© 2026 Dr. Ajay Shrikrishna Chowbe | Academic Leadership Profile
 </footer>
+<script>
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.15});
+
+sections.forEach(sec=>observer.observe(sec));
+</script>
+
 
 </body>
 </html>
