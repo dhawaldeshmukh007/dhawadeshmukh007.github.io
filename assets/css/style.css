@@ -1,3 +1,66 @@
+/* ===============================
+   DIRECTOR PAGE BACKGROUND
+================================ */
+
+body.director-bg {
+  position: relative;
+  background: linear-gradient(
+    120deg,
+    #eef3fb,
+    #f7faff,
+    #eef3fb
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease infinite;
+  overflow-x: hidden;
+}
+
+/* Floating subtle shapes */
+body.director-bg::before,
+body.director-bg::after {
+  content: "";
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  background: rgba(58, 123, 213, 0.12);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+}
+
+body.director-bg::before {
+  top: 10%;
+  left: -120px;
+  animation: floatLeft 22s infinite alternate ease-in-out;
+}
+
+body.director-bg::after {
+  bottom: 10%;
+  right: -120px;
+  animation: floatRight 25s infinite alternate ease-in-out;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatLeft {
+  from { transform: translateY(0); }
+  to   { transform: translateY(120px); }
+}
+
+@keyframes floatRight {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-120px); }
+}
+
+
+
+
+
+
 :root{
   --primary:#1f3c88;
   --secondary:#3a7bd5;
