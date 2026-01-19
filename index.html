@@ -140,18 +140,7 @@ academic and administrative experience in CBSE & ICSE schools across India.
 <footer>
 © 2026 Dr. Ajay Shrikrishna Chowbe | Academic Leadership Profile
 </footer>
-<script>
-const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-},{threshold:0.15});
 
-sections.forEach(sec=>observer.observe(sec));
-</script>
 
 <!-- ================= THANK YOU POPUP ================= -->
 <div id="thankYouModal" class="thank-you-modal">
@@ -163,8 +152,46 @@ sections.forEach(sec=>observer.observe(sec));
   </div>
 </div>
 
+  <script>
+const sections = document.querySelectorAll('.section, .section-card');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.15});
+sections.forEach(sec=>observer.observe(sec));
+
+document.querySelectorAll('a[href="#appointment"]').forEach(link=>{
+  link.addEventListener('click', e=>{
+    e.preventDefault();
+    document.getElementById('appointment').scrollIntoView({
+      behavior:'smooth'
+    });
+  });
+});
+
+const form = document.querySelector('#appointment form');
+const modal = document.getElementById('thankYouModal');
+
+if(form && modal){
+  form.addEventListener('submit', e=>{
+    e.preventDefault();
+    modal.style.display='flex';
+    form.reset();
+  });
+}
+
+function closeThankYou(){
+  modal.style.display='none';
+}
+</script>
+
+
 </body>
 </html>
+
 
 
 
