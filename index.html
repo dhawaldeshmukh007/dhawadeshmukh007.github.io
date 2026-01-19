@@ -101,7 +101,10 @@ academic and administrative experience in CBSE & ICSE schools across India.
 <img src="assets/images/cert2.jpg">
 </div>
 </div>
+  
 <div class="section-card">
+  <div class="section-card" id="appointment">
+
 <h2>Appointment / Enquiry</h2>
 <p>For academic consultation, CBSE guidance, and professional interaction.</p>
 
@@ -147,9 +150,19 @@ const observer = new IntersectionObserver(entries=>{
 sections.forEach(sec=>observer.observe(sec));
 </script>
 
+<!-- ================= THANK YOU POPUP ================= -->
+<div id="thankYouModal" class="thank-you-modal">
+  <div class="thank-you-box">
+    <h2>Thank You!</h2>
+    <p>Your appointment request has been submitted successfully.<br>
+    We will contact you shortly.</p>
+    <button onclick="closeThankYou()" class="button">OK</button>
+  </div>
+</div>
 
 </body>
 </html>
+
 
 
 
